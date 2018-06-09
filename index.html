@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Product Gallery</title>
+
+    <!-- Bootstrap core CSS -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="css/fontawesome-all.css">
+
+    <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+
+<body>
+
+    <!-- Formulario registro -->
+    <div class="wrapper modal" id="form-signup" >
+        <form class="form-signin" name="registro" > <!--cambiar onclick onsubmit="return comprobarDatosRegistro()"-->
+            <h2 class="form-signin-heading" id="form-signin-heading">Sign Up</h2>
+            <label for="username"><b>Email</b></label>
+            <input type="email" class="form-control" name="username" id="username-signup" placeholder="Enter Email" autofocus="" required/>
+            <label for="password"><b>Password</b></label>
+            <input type="password" class="form-control" name="password" id="password-signup" placeholder="Enter password" pattern="(?=.*[a-z]+)(?=.*[A-Z]+)(?=.*[0-9]+)(?=.*\W+)[A-Za-z0-9\W]{6,}" required/>
+            <label for="password"><b>Repeat Password</b></label>
+            <input type="password" class="form-control" name="pswrepeat" id="psw-repeat" placeholder="Repeat Password" pattern="(?=.*[a-z]+)(?=.*[A-Z]+)(?=.*[0-9]+)(?=.*\W+)[A-Za-z0-9\W]{6,}" required/>
+            <label class="checkbox">
+        <input type="checkbox" value="remember-me" id="remember-me" name="rememberMe"> Remember me
+      </label>
+            <button class="btn btn-lg btn-primary btn-block" type="submit" id="buttonRegistro" name="enviar">Registrar</button>
+        </form>
+    </div>
+    <!-- Formulario login -->
+    <div class="wrapper modal" id="form-login">
+        <form class="form-signin" name="login" > <!--cambiar onclick onsubmit="return comprobarDatosLogIn()"-->
+            <h2 class="form-signin-heading">Please login</h2>
+            <label for="username"><b>Email</b></label>
+            <input type="email" class="form-control" name="username" placeholder="Enter Email" id="username-signin" autofocus="" required  pattern=".+@.+[.].{2,3}" />
+            <label for="password"><b>Password</b></label>
+            <input type="password" class="form-control" name="password" placeholder="Enter password" id="password-signin" required pattern="(?=.*[a-z]+)(?=.*[A-Z]+)(?=.*[0-9]+)(?=.*\W+)[A-Za-z0-9\W]{6,}"/>
+            <label class="checkbox">
+            <input type="checkbox" value="show-passwd" id="show-passwd" name="showPasswd"> show password
+            </label>
+            <button class="btn btn-lg btn-primary btn-block" type="submit" id="buttonLogin" name="enviar">Login</button>
+        </form>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#"><i class="fab fa-pagelines"></i></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home
+                <span class="sr-only">(current)</span>
+              </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="menuSignup">Sign up</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="menuLogin" >Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="menuloginUsername"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="menuSignout">Sign out</a> <!--cambiar onclick onclick="cerrarSesion()"-->
+                    </li>
+                </ul>
+                <form class="form-inline" action="#" id="formSearch">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search" id="search"> <!--onkeyup="loadImages()"-->
+                    <button class="btn btn-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+        <button id="buttonLike" class="btn btn-primary botonlike" style="display: none" >Mostrar me gusta</button>
+        <button id="cerrarLike" class="btn btn-primary botonlike" style="display: none" >Cerrar me gusta</button>
+        <!-- fin galeria-->
+        <div id="megusta" style="display: none" class="row d-flex justify-content-between imgStyle">
+        </div>
+        <h3>Seleccionar categoria</h3>
+        <select id="categ" class="selCateg" onchange="guardarValorOption()">
+             <!--generadas OPTIONS por DOM-->
+        </select>
+        <h3>Selecciona numero de imágenes</h3>
+        <select id="numPag" class="selPag">
+            <!--<option value="selecciona numero pagina" disabled>selecciona numero pagina</option>
+            <option value="9">9</option>
+            <option value="18">18</option>
+            <option value="27">27</option>
+            <option value="36">36</option>-->
+        </select>
+        <h1>Galeria Gatos</h1>
+        <!--galeria-->
+        <div id="gallery" class="row d-flex justify-content-between imgStyle">
+            <!--generadas imagenes por DOM-->
+        </div>
+        <!--<div id="paginacion">
+            <ul id="lista" style="display: none">        
+            </ul>
+        </div>-->
+    </div>
+    <!-- /.container -->
+    <!-- jQuery library -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <!--<script src="js/popper.min.js"></script>-->
+    <!-- Latest compiled JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

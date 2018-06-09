@@ -1,0 +1,6 @@
+Instalar node.js
+poner la orden en el CMD -> npm install -g json-server 
+despues iniciarlo con la orden --> json-server --watch nombre_json.json ( cd  carpeta donde tengamos el JSON)
+
+**El nombre seria tareas.json**
+

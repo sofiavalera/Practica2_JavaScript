@@ -1,0 +1,36 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "email": "sofia@gmail.com",
+      "password": "Sofia1@"
+    },
+    {
+      "id": 2,
+      "email": "pepe@gmail.com",
+      "password": "Pepe9@"
+    }
+  ],
+  "megusta": [
+    {
+      "megusta": "http://24.media.tumblr.com/tumblr_m3rw72Oyzw1rpokdio1_500.gif",
+      "idUser": 1,
+      "id": 10
+    },
+    {
+      "megusta": "http://25.media.tumblr.com/tumblr_lgtecsbsou1qcn249o1_500.gif",
+      "idUser": 1,
+      "id": 12
+    },
+    {
+      "megusta": "http://24.media.tumblr.com/tumblr_ljx8e8W6821qh28hmo1_400.gif",
+      "idUser": 1,
+      "id": 13
+    },
+    {
+      "megusta": "http://25.media.tumblr.com/tumblr_m5u79dUPDS1rt1bj0o1_500.gif",
+      "idUser": 2,
+      "id": 14
+    }
+  ]
+}

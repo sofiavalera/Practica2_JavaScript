@@ -1,0 +1,50 @@
+<response>
+<data>
+<categories>
+	<category>
+		<id>1</id>
+		<name>hats</name>
+	</category>
+	<category>
+		<id>2</id>
+		<name>space</name>
+	</category>
+	<category>
+		<id>3</id>
+		<name>funny</name>
+	</category>
+	<category>
+		<id>4</id>
+		<name>sunglasses</name>
+	</category>
+	<category>
+		<id>5</id>
+		<name>boxes</name>
+	</category>
+	<category>
+		<id>6</id>
+		<name>caturday</name>
+	</category>
+	<category>
+		<id>7</id>
+		<name>ties</name>
+	</category>
+	<category>
+		<id>9</id>
+		<name>dream</name>
+	</category>
+	<category>
+		<id>10</id>
+		<name>kittens</name>
+	</category>
+	<category>
+		<id>14</id>
+		<name>sinks</name>
+	</category>
+	<category>
+		<id>15</id>
+		<name>clothes</name>
+	</category>
+</categories>
+</data>
+</response>
